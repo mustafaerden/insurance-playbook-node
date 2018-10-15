@@ -72,20 +72,22 @@ router.post('/askquestion', (req, res) => {
       // if user is not logged-in redirect back to login page //
       req.flash('reg_success_message', 'Please login to be able to ask a question !');
       res.redirect('/login');
-    }
+    } else{
 
-    const newAskQuestion = new AskQuestion({
-      user: req.user,
-      title: req.body.title,
-      details: req.body.details
-    });
+      const newAskQuestion = new AskQuestion({
+        user: req.user,
+        title: req.body.title,
+        details: req.body.details
+      });
+  
+      newAskQuestion.save().then(savedAskQuestion => {
+        req.flash('reg_success_message', 'Your Question sent successfully.');
+        res.redirect('/');
+      }).catch(error => {
+        console.log('Couldnt sent the question');
+      });
 
-    newAskQuestion.save().then(savedAskQuestion => {
-      req.flash('reg_success_message', 'Your Question sent successfully.');
-      res.redirect('/');
-    }).catch(error => {
-      console.log('Couldnt sent the question');
-    });
+    }  
 
   }
 

@@ -1,0 +1,43 @@
+<div class="col-md-12">
+
+  <div class="page-content ask-question">
+    <div class="boxedtitle page-title"><h2>Any Question ?</h2></div>
+
+    <p>You can ask your questions with using the form below. Please do not forget to sign up and login before asking your questions .</p>
+
+    <div class="form-style form-style-3" id="question-submit">
+      <form method="post" action="/askquestion">
+        <div class="form-inputs clearfix">
+          <p>
+            <label for="title" class="required">Question Title<span>*</span></label>
+            <input type="text" id="question-title" name="title">
+            <span class="form-description">Please choose an appropriate title for the question to answer it even easier .</span>
+          </p>
+          <p>
+            <label for="category" class="required">Category<span>*</span></label>
+            <span class="styled-select">
+              <select name="category">
+                <option value="">Select a Category</option>
+                {{#each categories}}
+                <option value="{{id}}">{{name}}</option>
+                {{/each}}
+              </select>
+            </span>
+            <span class="form-description">Please choose the appropriate section if needed .</span>
+          </p>
+          <!-- <div class="clearfix"></div> -->
+        </div>
+        <div id="form-textarea">
+          <p>
+            <label for="details" class="required">Details<span>*</span></label>
+            <textarea name="details" id="question-details" aria-required="true" cols="58" rows="8"></textarea>
+            <span class="form-description">Type the description thoroughly and in detail .</span>
+          </p>
+        </div>
+        <p class="form-submit">
+          <input type="submit" id="publish-question" value="Send Your Question" class="button color small submit">
+        </p>
+      </form>
+    </div>
+  </div><!-- End page-content -->
+</div><!-- End main -->

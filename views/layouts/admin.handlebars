@@ -1,0 +1,43 @@
+{{> admin/_header}}
+
+<body data-col="2-columns" class=" 2-columns ">
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <div class="wrapper">
+
+
+    <div data-active-color="white" data-background-color="timber" data-image="/admin/app-assets/img/sidebar-bg/07.jpg" class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="logo clearfix"><a href="/" class="logo-text float-left">
+            <div class="logo-img"><img src="/admin/app-assets/img/logo.png" alt="Convex Logo" /></div><span class="text align-middle">ADMIN</span>
+          </a><a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i
+              data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none"><i
+              class="ft-circle"></i></a></div>
+      </div>
+
+
+      {{> admin/_mainSidebar}}
+
+      <div class="sidebar-background"></div>
+    </div>
+
+
+
+    {{> admin/_navbar}}
+
+
+    <div class="main-panel">
+      <div class="main-content">
+        <div class="content-wrapper">
+          <div class="container-fluid">
+
+            {{> messages/_messages}}
+
+            {{{body}}}
+
+
+
+          </div>
+        </div>
+      </div>
+
+      {{> admin/_footer}}

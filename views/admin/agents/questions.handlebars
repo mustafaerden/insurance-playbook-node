@@ -1,0 +1,55 @@
+<!-- Striped rows Light Starts-->
+<section id="striped-light">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-wrap bar-info">
+            <h4 class="card-title d-inline">Agents Asking</h4>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-block">
+
+            {{#if askedQuestions}}
+
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Agent</th>
+                  <th>Question Title</th>
+                  <th>Category</th>
+                  <th>Details</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                {{#each askedQuestions}}
+                <tr>
+                  <td>{{user.firstname}}</td>
+                  <td>{{title}}</td>
+                  <td>{{category.name}}</td>
+                  <td>{{details}}</td>
+                  <td>
+                    <form class="d-inline" action="/admin/agents/questions/{{id}}?_method=DELETE" method="post">
+                      <button type="submit" class="btn btn-danger btn-round btn-sm shadow-z-2">
+                        <i class="icon-trash"></i> Delete
+                      </button>
+                    </form>
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            {{else}}
+            <p>There is no questions anyone asked yet !</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Striped rows Light Ends -->

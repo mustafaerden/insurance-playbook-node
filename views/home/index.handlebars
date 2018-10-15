@@ -1,0 +1,24 @@
+
+<div class="col-md-9" style="border:1px solid #dedede;height:367px;padding:50px 30px 50px 30px;-webkit-box-shadow: 7px 7px 28px -1px rgba(255,115,97,1);
+-moz-box-shadow: 7px 7px 28px -1px rgba(255,115,97,1);box-shadow: 7px 7px 28px -1px rgba(255,115,97,1);text-align:center;">
+ 
+
+    {{#if user}}
+
+    <h1 style="color:#FF7361;">Welcome {{user.firstname}} {{user.lastname}}!</h1>
+    <p>This is an application in which you can find answers to common questions regarding the insurance campaign.</p>
+    <hr>
+    <p><strong>Please use the categories menu on the right to see questions for each category.</strong></p>
+
+    {{else}}
+
+    <h1 style="color:#FF7361;">Hello, guys!</h1>
+    <p>This is an application in which you can find answers to common questions regarding the insurance campaign.</p>
+    <hr>
+    <p><strong>Please use the categories menu on the right to see questions for each category.</strong></p>
+
+    {{/if}}
+ 
+</div>
+
+{{> home/_sidebar}}

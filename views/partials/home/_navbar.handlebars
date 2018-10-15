@@ -1,0 +1,20 @@
+<section class="container clearfix">
+  <h3 class="logo" style="font-size:22px;"><a href="/">Insurance Playbook</a></h3>
+  {{!-- <div class="logo"><a href="/">Insurance</a></div> --}}
+  <nav class="navigation">
+    <ul>
+      <li class=""><a href="/">Home</a>
+      </li>
+
+      <li><a href="/askquestion">Ask Question</a></li>
+
+      {{#if user}}
+      <li><a href="#"><i class="icon-user"></i> {{user.firstname}}</a></li>
+      <li><a href="/logout"><i class="icon-signout"></i> Logout</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</section><!-- End container -->

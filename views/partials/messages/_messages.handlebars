@@ -1,0 +1,53 @@
+{{#each errors}}
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error!</strong> {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+</div>
+
+{{else}}
+
+{{/each}}
+
+{{!-- Login yaparken passport tan gelen message yani şifre yanlış kullanıcı kayıtlı değil hataları --}}
+{{#if error}}
+  <div style="background-color:#FF7361;text-align:center;margin-top:0;">
+    <p style="padding:8px;color:#fff;"><strong>{{error}}</strong></p>
+</div>
+{{/if}}
+
+{{!-- Register ve Login mesajları --}}
+<div class="container">
+{{#each userErrors}}
+
+<div style="background-color:#FF7361;text-align:center;margin-top:0;">
+  <p style="padding:8px;color:#fff;"><strong>{{userMessage}}</strong></p>
+</div>
+
+{{else}}
+
+{{/each}}
+</div>
+
+{{!-- Flash success_message --}}
+{{#if success_message}}
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> {{success_message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+</div>
+
+{{/if}}
+
+{{!-- Register Flash success_message --}}
+{{#if reg_success_message}}
+
+<div style="background-color:#FF7361;text-align:center;margin-top:0;">
+  <p style="color:red;padding:8px;color:#fff;"><strong>{{reg_success_message}}</strong></p>
+</div>
+
+{{/if}}

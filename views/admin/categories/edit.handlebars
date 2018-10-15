@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-wrap bar-success">
+          <h4 class="card-title" id="horz-layout-basic">Edit Category</h4>
+        </div>
+        <p class="mb-0">You can edit the Category with using the form below.</p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+
+          <form class="form form-horizontal" method="post" action="/admin/categories/edit/{{category.id}}?_method=PUT">
+            <div class="form-body">
+
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="name">Category Name: </label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control" name="name" value="{{category.name}}">
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <a href="/admin/categories" class="btn btn-danger btn-sm mr-1 shadow-z-2">
+                  <i class="icon-trash"></i> Cancel
+                </a>
+                <button type="submit" class="btn btn-success btn-sm shadow-z-2">
+                  <i class="icon-note"></i> Save
+                </button>
+              </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

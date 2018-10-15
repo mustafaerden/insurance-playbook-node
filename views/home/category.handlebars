@@ -1,0 +1,32 @@
+
+<div class="col-md-9">
+
+{{#if questions}}
+{{#each questions}}
+
+
+  <h2 style="color:#FF7361;">{{title}}</h2>
+  <article class="question question-type-normal">
+    {{!-- <h2>
+      <a href="single_question.html">{{title}}</a>
+    </h2> --}}
+    {{!-- <div class="question-author">
+      <a href="#" original-title="ahmed" class="question-author-img tooltip-n"><span></span><img alt="" src="../ask-me/images/demo/avatar.png"></a>
+    </div> --}}
+    <div class="question-inner">
+      <div class="clearfix"></div>
+      <div>{{{answer}}}</div>
+      <hr style="margin-bottom:5px;">
+      <span class="question-date" style="float:right;"><i class="icon-time"></i>{{generateTime date 'MMMM Do YYYY'}}</span>
+      <div class="clearfix"></div>
+    </div>
+  </article>
+{{/each}}
+{{else}}
+  <h3>There is no question belongs to this category yet!</h3>
+{{/if}}
+</div>
+
+
+
+{{> home/_sidebar}}

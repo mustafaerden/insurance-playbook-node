@@ -34,7 +34,7 @@ router.delete('/:id', (req, res) => {
 
 // Userların sordugu soruları admin panele çekiyoruz;
 router.get('/questions', (req, res) => {
-  AskQuestion.find({}).populate({ path: 'user', select: 'firstname' }).populate({ path: 'category', select: 'name' }).then(askedQuestions => {
+  AskQuestion.find({}).populate({ path: 'user', select: 'firstname' }).then(askedQuestions => {
     res.render('admin/agents/questions', {
       askedQuestions: askedQuestions
     });

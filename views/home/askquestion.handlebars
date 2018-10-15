@@ -13,18 +13,6 @@
             <input type="text" id="question-title" name="title">
             <span class="form-description">Please choose an appropriate title for the question to answer it even easier .</span>
           </p>
-          <p>
-            <label for="category" class="required">Category<span>*</span></label>
-            <span class="styled-select">
-              <select name="category">
-                <option value="">Select a Category</option>
-                {{#each categories}}
-                <option value="{{id}}">{{name}}</option>
-                {{/each}}
-              </select>
-            </span>
-            <span class="form-description">Please choose the appropriate section if needed .</span>
-          </p>
           <!-- <div class="clearfix"></div> -->
         </div>
         <div id="form-textarea">

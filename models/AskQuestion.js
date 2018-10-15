@@ -12,11 +12,6 @@ const AskQuestionSchema = new Schema({
     required: true
   },
 
-  category: {
-    type: Schema.Types.ObjectId,
-    ref: 'categories'
-  },
-
   details: {
     type: String,
     required: true

@@ -87,30 +87,5 @@ app.use('/admin/agents', agents);
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-
-  // Generate admin user before start listening app
-
-  const adminUser = new User({
-    email: 'mustafaerden87@gmail.com',
-    password: '123456',
-    firstname: 'Mustafa',
-    lastname: 'Erden',
-    isAdmin: true,
-  });
-
-  if (adminUser) {
-    console.log('adminUser already existed');
-  } else {
-    bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash(adminUser.password, salt, (err, hash) => {
-        adminUser.password = hash;
-        adminUser.save().then(savedUser => {
-          console.log('Admin user created!');
-        });
-      });
-    });
-  }
-
   console.log(`Listenin on port ${port}`);
-
 });

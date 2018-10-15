@@ -46,11 +46,7 @@ router.get('/category/:slug', (req, res) => {
 
 // Ask question get sayfası;
 router.get('/askquestion', (req, res) => {
-  Category.find({}).then(categories => {
-    res.render('home/askquestion', {
-      categories: categories
-    });
-  });
+    res.render('home/askquestion');
 });
 
 // Ask question post ile kayıt işlemi;
@@ -80,7 +76,6 @@ router.post('/askquestion', (req, res) => {
 
     const newAskQuestion = new AskQuestion({
       user: req.user,
-      category: req.body.category,
       title: req.body.title,
       details: req.body.details
     });

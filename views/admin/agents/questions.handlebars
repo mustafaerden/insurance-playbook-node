@@ -19,7 +19,6 @@
                 <tr>
                   <th>Agent</th>
                   <th>Question Title</th>
-                  <th>Category</th>
                   <th>Details</th>
                   <th>Delete</th>
                 </tr>
@@ -30,7 +29,6 @@
                 <tr>
                   <td>{{user.firstname}}</td>
                   <td>{{title}}</td>
-                  <td>{{category.name}}</td>
                   <td>{{details}}</td>
                   <td>
                     <form class="d-inline" action="/admin/agents/questions/{{id}}?_method=DELETE" method="post">

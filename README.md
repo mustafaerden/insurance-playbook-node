@@ -1,4 +1,4 @@
-# insurance-playbook-node
+Insurance Playbook
 A node.js application for categorized questions and answers belongs to each categories with admin panel
 
 clone the repo
